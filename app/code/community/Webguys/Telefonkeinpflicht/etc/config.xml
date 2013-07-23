@@ -19,6 +19,13 @@
             </telefonkeinpflicht_setup>
         </resources>
 
+        <models>
+            <sales>
+                <rewrite>
+                    <quote_address>Webguys_Telefonkeinpflicht_Model_Sales_Quote_Address</quote_address>
+                </rewrite>
+            </sales>
+        </models>
     </global>
 
     <frontend>
