@@ -4,9 +4,6 @@
         <Webguys_Telefonkeinpflicht>
             <active>true</active>
             <codePool>community</codePool>
-            <depends>
-                <Dsdata_NoState/>
-            </depends>
         </Webguys_Telefonkeinpflicht>
     </modules>
 </config>
