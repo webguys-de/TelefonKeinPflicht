@@ -12,10 +12,9 @@ class Webguys_Telefonkeinpflicht_Model_Observer
 
         $transportObject = $event->getTransport();
 
-        if ( in_array($type, array('checkout/onepage_billing', 'checkout/onepage_shipping') ) ) {
+        if ( in_array($type, array('checkout/onepage_billing', 'checkout/onepage_shipping','customer/address_edit') ) ) {
 
             $html = $transportObject->getHtml();
-
             $html = preg_replace_callback('#\<div class="field"\>(.*?)\</div\>#is', array( $this, 'replacer' ), $html );
 
             $transportObject->setHtml( $html );
@@ -27,7 +26,7 @@ class Webguys_Telefonkeinpflicht_Model_Observer
     public function replacer( $matches )
     {
         $str = $matches[0];
-        if ( strpos($str, ':telephone') !== false ) {
+        if ( strpos($str, ':telephone') !== false || strpos($str, 'id="telephone"') !== false ) {
             $str = str_replace('required','',$str);
             $str = str_replace('<em>*</em>', '', $str);
         }
