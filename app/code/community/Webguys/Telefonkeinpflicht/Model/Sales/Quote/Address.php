@@ -10,12 +10,13 @@ class Webguys_Telefonkeinpflicht_Model_Sales_Quote_Address extends Mage_Sales_Mo
     {
         $errors = parent::validate();
 
-        $messageToFilter = Mage::helper('customer')->__('Please enter the telephone number.');
-        if (is_array($errors) && false !== ($x = array_search($messageToFilter, $errors)))
-        { // found telephone error: get rid of it!
-            unset($errors[$x]);
-            Mage::dispatchEvent('customer_address_validation_after', array('address' => $this));
-        }
+        $transport = new Varien_Object();
+        $transport->setErrors( $errors );
+        $transport->setAddress( $this );
+
+        Mage::dispatchEvent('customer_address_validation_errors', array('transport' => $transport ));
+
+        $errors = $transport->getErrors();
 
         if ($errors === true || empty($errors))
         { // no errors: be true

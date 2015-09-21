@@ -33,6 +33,18 @@
                 </rewrite>
             </customer>
         </models>
+
+        <events>
+            <customer_address_validation_errors>
+                <observers>
+                    <telefonkeinpflicht>
+                        <class>Webguys_Telefonkeinpflicht_Model_Observer</class>
+                        <method>customer_address_validation_errors</method>
+                    </telefonkeinpflicht>
+                </observers>
+            </customer_address_validation_errors>
+        </events>
+
     </global>
 
     <frontend>
