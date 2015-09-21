@@ -23,8 +23,15 @@
             <sales>
                 <rewrite>
                     <quote_address>Webguys_Telefonkeinpflicht_Model_Sales_Quote_Address</quote_address>
+                    <order_address>Webguys_Telefonkeinpflicht_Model_Sales_Order_Address</order_address>
+                    <quote_address>Webguys_Telefonkeinpflicht_Model_Sales_Quote_Address</quote_address>
                 </rewrite>
             </sales>
+            <customer>
+                <rewrite>
+                    <address>Webguys_Telefonkeinpflicht_Model_Customer_Address</address>
+                </rewrite>
+            </customer>
         </models>
     </global>
 
