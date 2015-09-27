@@ -1,6 +1,8 @@
 <?php
 
-class Webguys_Telefonkeinpflicht_Model_Sales_Quote_Address extends Mage_Sales_Model_Quote_Address {
+class Webguys_Telefonkeinpflicht_Model_Customer_Address extends Mage_Customer_Model_Address
+{
+
     /**
      * Validate address attribute values
      *
@@ -25,4 +27,5 @@ class Webguys_Telefonkeinpflicht_Model_Sales_Quote_Address extends Mage_Sales_Mo
 
         return $errors;
     }
+
 }
