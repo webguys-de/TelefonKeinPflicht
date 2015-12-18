@@ -1,5 +1,6 @@
 {
   "name": "code-x/telefonkeinpflicht",
+  "type": "magento-module",
   "license": "code-x",
   "authors": [
     {
