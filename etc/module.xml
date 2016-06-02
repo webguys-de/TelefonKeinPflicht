@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 FireGento e.V. - All rights reserved.
+ * See LICENSE.md bundled with this module for license details.
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Webguys_TelefonKeinPflicht" setup_version="1.0.0">
+
+        <sequence>
+            <module name="Magento_Customer"/>
+        </sequence>
+
+    </module>
+</config>

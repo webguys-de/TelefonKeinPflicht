@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="\Magento\Customer\Model\Address">
+        <plugin name="webguys_telefonkeinpflicht_customer" type="\Webguys\TelefonKeinPflicht\Plugin\Model\Customer\Address" sortOrder="1"/>
+    </type>
+
+    <type name="\Magento\Quote\Model\Quote\Address">
+        <plugin name="webguys_telefonkeinpflicht_quote" type="\Webguys\TelefonKeinPflicht\Plugin\Model\Quote\Address" sortOrder="1"/>
+    </type>
+
+    <type name="\Magento\Sales\Model\Order\Address\Validator">
+        <plugin name="webguys_telefonkeinpflicht_order" type="\Webguys\TelefonKeinPflicht\Plugin\Model\Order\Address" sortOrder="1"/>
+    </type>
+
+    <preference for="\Magento\Customer\Model\Address" type="\Webguys\TelefonKeinPflicht\Model\Address" />
+
+</config>
+
+
