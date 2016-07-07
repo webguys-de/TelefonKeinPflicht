@@ -1,6 +1,12 @@
 <?php
 
-class Webguys_Telefonkeinpflicht_Model_Sales_Quote_Address extends Mage_Sales_Model_Quote_Address {
+if (Mage::helper('core')->isModuleEnabled('Payone_Core')) {
+    class Webguys_Telefonkeinpflicht_Model_Sales_Quote_Address_Abstract extends Payone_Core_Model_Sales_Quote_Address {}
+} else {
+    class Webguys_Telefonkeinpflicht_Model_Sales_Quote_Address_Abstract extends Mage_Sales_Model_Quote_Address {}
+}
+
+class Webguys_Telefonkeinpflicht_Model_Sales_Quote_Address extends Webguys_Telefonkeinpflicht_Model_Sales_Quote_Address_Abstract {
     /**
      * Validate address attribute values
      *
