@@ -39,7 +39,7 @@ class Webguys_Telefonkeinpflicht_Model_Observer
         $transport = $event->getTransport();
         $errors = $transport->getErrors();
 
-        $messageToFilter = Mage::helper('customer')->__('Please enter the telephone number.');
+        $messageToFilter = (array) Mage::helper('customer')->__('Please enter the telephone number.');
         if ( is_array($errors) ) { // found telephone error: get rid of it!
             $errors = array_diff( $errors, $messageToFilter );
         }
